@@ -177,7 +177,7 @@ If FORCE-LINE is non-nil, force moving to this line."
 
 (defvar register-list-concat-key-select 'last)
 
-;; FIXME skip rectangle (or handle them separatly
+;; FIXME skip rectangle (or handle them separately
 (defun register-list-execute nil
   "Delete/concatenate registers marker for deletion/concatenation."
   (interactive)
@@ -467,7 +467,7 @@ the register or copy its value into the kill ring."
 		   (window-configuration-frame (car value)) 'name)))
 	((string= "F" type)
 	 (format "[Frame configuration]"))
-	(t "[Error: unknow type]")))
+	(t "[Error: unknown type]")))
 
 (defun register-list-get-type (key)
   "Get the type for register's KEY."
@@ -531,7 +531,7 @@ the register or copy its value into the kill ring."
   (register-list-set-key '1-))
 
 (defun register-list-set-key (function)
-  "Update the regsiter key by applying FUNCTION."
+  "Update the register key by applying FUNCTION."
   (register-list-preserve-pos
       2 ;; go back to top of the sorted list
     (beginning-of-line)
